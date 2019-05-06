@@ -63,7 +63,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static', //指的是静态资源文件夹，默认“static”
-    assetsPublicPath: 'http://www.zhixue.com/appTeachSupervision/', //指的是发布路径
+    assetsPublicPath: 'https://sven820.github.io/gogo/', //指的是发布路径
 
     /**
      * Source Maps
@@ -96,7 +96,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static', //指的是静态资源文件夹，默认“static”
-    assetsPublicPath: 'https://test.zhixue.com/appTeachSupervision/', //指的是发布路径
+    assetsPublicPath: 'https://sven820.github.io/gogo/', //指的是发布路径
 
     /**
      * Source Maps
