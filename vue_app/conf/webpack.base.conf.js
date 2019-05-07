@@ -8,5 +8,6 @@ const config = require('./config');
 module.exports = {
   outputDir: '../dist',
   indexPath: '../index.html',
+  productionSourceMap: false
   // assetsDir: 'static'
 };
