@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <navgation></navgation>
     <main role="main">
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
@@ -40,39 +39,37 @@
 
       </div> <!-- /container -->
     </main>
-
-    <foot></foot>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import navgation from '../components/Navgation'
-import foot from '../components/Footer'
+    // @ is an alias to /src
+    import navgation from '../components/Navgation'
+    import foot from '../components/Footer'
 
-export default {
-    name: 'home',
-    components: {
-        navgation,
-        foot
-    },
-    data() {
-        return {
-            advertise: {
-                title: '老板,有活吗!',
-                locate: '合肥',
-                work: '移动全栈开发',
-                desc: '在独立开发的路上走的更远'
-            },
-            apps: {
+    export default {
+        name: 'home',
+        components: {
+            navgation,
+            foot
+        },
+        data() {
+            return {
+                advertise: {
+                    title: '老板,有活吗!',
+                    locate: '合肥',
+                    work: '移动全栈开发',
+                    desc: '在独立开发的路上走的更远'
+                },
+                apps: {
 
+                }
             }
-        }
-    },
-    methods: {
+        },
+        methods: {
 
+        }
     }
-}
 </script>
 
 <style lang="css" scoped>

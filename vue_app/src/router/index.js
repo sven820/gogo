@@ -8,9 +8,22 @@ export default new Router({
   // base: process.env.BASE_URL,
   routes: [
       {
-        path: '/',
-        name: 'home',
-        component: () => import(/* webpackChunkName: "about" */ '@/views/Home.vue')
+          path: '/',
+          name: 'index',
+          component: () => import(/* webpackChunkName: "about" */ '@/views/index.vue'),
+          children: [
+              {
+                  path: 'home',
+                  name: 'home',
+                  component: () => import(/* webpackChunkName: "about" */ '@/views/Home.vue'),
+                  props: { showfoot: true }
+              },
+              {
+                  path: 'resume',
+                  name: 'resume',
+                  component: () => import(/* webpackChunkName: "about" */ '@/views/Resume.vue')
+              }
+          ]
       }
   ]
 })
