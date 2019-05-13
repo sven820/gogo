@@ -19,17 +19,19 @@
         <div class="row">
           <div class="col-md d-flex flex-column align-items-start">
             <h2>iOS/Android</h2>
-            <p>精通iOS/Android开发</p>
+            <p>接各种iOS，Android app开发，马甲包，app上架等</p>
+            <p>接各种iOS技术调研，技术文档输出等</p>
+            <p>接各种iOS项目bug修复，代码review</p>
             <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
           </div>
           <div class="col-md d-flex flex-column align-items-start">
             <h2>H5/Web</h2>
-            <p></p>
+            <p>接h5，web开发，网站建设</p>
             <p class="mt-auto"><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
           </div>
           <div class="col-md d-flex flex-column align-items-start">
             <h2>小程序</h2>
-            <p></p>
+            <p>接微信小程序，公众号开发</p>
             <p class="mt-auto"><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
           </div>
         </div>
@@ -74,7 +76,5 @@ export default {
 </script>
 
 <style lang="css" scoped>
-  .container {
 
-  }
 </style>

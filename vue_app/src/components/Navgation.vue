@@ -50,6 +50,9 @@
         methods: {
             didClickNavItem(event) {
                 let el = event.currentTarget
+                if ($(el).parent().hasClass('active')) {
+                    return
+                }
                 $(el).parent().addClass('active')
                 $(this.selectNavItem).parent().removeClass('active')
                 this.selectNavItem = el
