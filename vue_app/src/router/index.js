@@ -11,12 +11,20 @@ export default new Router({
           path: '/',
           name: 'index',
           component: () => import(/* webpackChunkName: "about" */ '@/views/index.vue'),
+          props: function (route) {
+              let showfoot = true
+              if (route.name == 'home') {
+                  showfoot = true
+              }else if(route.name == 'resume') {
+                  showfoot = false
+              }
+              return {showfoot: showfoot}
+          },
           children: [
               {
                   path: 'home',
                   name: 'home',
                   component: () => import(/* webpackChunkName: "about" */ '@/views/Home.vue'),
-                  props: { showfoot: true }
               },
               {
                   path: 'resume',

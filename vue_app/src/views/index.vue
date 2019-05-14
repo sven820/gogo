@@ -20,7 +20,7 @@
             }
         },
         props: {
-            showfoot: true
+            showfoot: Boolean
         },
         created() {
             console.log(this.showfoot)

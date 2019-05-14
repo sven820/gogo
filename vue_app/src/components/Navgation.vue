@@ -7,19 +7,19 @@
         <div class="navbar-collapse collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link default-select-item" href="#" @click="didClickNavItem">首页</a>
+                    <router-link :to="{ name: 'home'}" class="nav-link default-select-item" @click.native="didClickNavItem">首页</router-link>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" @click="didClickNavItem">Team</a>
+                    <router-link :to="{ name: 'index'}" class="nav-link" @click.native="didClickNavItem">Team</router-link>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" @click="didClickNavItem">加入&邀请</a>
+                    <router-link :to="{ name: 'index'}" class="nav-link" @click.native="didClickNavItem">加入&邀请</router-link>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" @click="didClickNavItem">简历</a>
+                    <router-link :to="{ name: 'resume'}" class="nav-link" @click.native="didClickNavItem">简历</router-link>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" @click="didClickNavItem">打赏</a>
+                    <router-link :to="{ name: 'index'}" class="nav-link" @click.native="didClickNavItem">打赏</router-link>
                 </li>
             </ul>
             <ul class="navbar-nav">
@@ -58,7 +58,6 @@
                 this.selectNavItem = el
             }
         }
-
     }
 </script>
 
