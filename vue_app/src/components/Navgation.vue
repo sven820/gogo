@@ -44,8 +44,35 @@
                 selectNavItem: {},
             }
         },
+        props: {
+            didShowMenuHandle: Function,
+            didHideMenuHandle: Function,
+        },
         mounted() {
             this.selectNavItem = $('.default-select-item').first()
+
+            $('.collapse').on('show.bs.collapse', function () {
+                let et = new CustomEvent(global.cevent.kEvent_NavBarStateChangeEvent, {detail:{state: 'show'}})
+                window.dispatchEvent(et)
+            })
+            $('.collapse').on('shown.bs.collapse', function () {
+                let et = new CustomEvent(global.cevent.kEvent_NavBarStateChangeEvent, {detail:{state: 'shown'}})
+                window.dispatchEvent(et)
+                if (this.didShowMenuHandle) {
+                    this.didShowMenuHandle()
+                }
+            })
+            $('.collapse').on('hide.bs.collapse', function () {
+                let et = new CustomEvent(global.cevent.kEvent_NavBarStateChangeEvent, {detail:{state: 'hide'}})
+                window.dispatchEvent(et)
+            })
+            $('.collapse').on('hidden.bs.collapse', function () {
+                let et = new CustomEvent(global.cevent.kEvent_NavBarStateChangeEvent, {detail:{state: 'hidden'}})
+                window.dispatchEvent(et)
+                if (this.didHideMenuHandle) {
+                    this.didHideMenuHandle()
+                }
+            })
         },
         methods: {
             didClickNavItem(event) {
@@ -56,6 +83,10 @@
                 $(el).parent().addClass('active')
                 $(this.selectNavItem).parent().removeClass('active')
                 this.selectNavItem = el
+
+                if ($('.navbar-toggler').is(':visible')) {
+                    $('.collapse').collapse('toggle')
+                }
             }
         }
     }

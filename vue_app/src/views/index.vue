@@ -23,7 +23,7 @@
             showfoot: Boolean
         },
         created() {
-            console.log(this.showfoot)
+
         }
     }
 </script>
