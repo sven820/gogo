@@ -12,7 +12,7 @@ export default new Router({
           name: 'index',
           component: () => import(/* webpackChunkName: "about" */ '@/views/index.vue'),
           props: function (route) {
-              let showfoot = true
+              let showfoot = false
               if (route.name == 'home') {
                   showfoot = true
               }else if(route.name == 'resume') {
@@ -22,6 +22,11 @@ export default new Router({
           },
           children: [
               {
+                  path: '/',
+                  name: 'home',
+                  component: () => import(/* webpackChunkName: "about" */ '@/views/Home.vue'),
+              },
+              {
                   path: 'home',
                   name: 'home',
                   component: () => import(/* webpackChunkName: "about" */ '@/views/Home.vue'),
@@ -30,8 +35,14 @@ export default new Router({
                   path: 'resume',
                   name: 'resume',
                   component: () => import(/* webpackChunkName: "about" */ '@/views/Resume.vue')
+              },
+              {
+                  path: 'detail',
+                  name: 'detail',
+                  component: () => import('@/views/Detail.vue'),
               }
           ]
-      }
+      },
+
   ]
 })
