@@ -10,10 +10,10 @@
                     <router-link :to="{ name: 'home'}" class="nav-link default-select-item" @click.native="didClickNavItem">首页</router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link :to="{ name: 'index'}" class="nav-link" @click.native="didClickNavItem">Team</router-link>
+                    <router-link :to="{ name: 'index'}" class="nav-link" @click.native="didClickNavItem">加入&邀请</router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link :to="{ name: 'index'}" class="nav-link" @click.native="didClickNavItem">加入&邀请</router-link>
+                    <router-link :to="{ name: 'index'}" class="nav-link" @click.native="didClickNavItem">技术小栈</router-link>
                 </li>
                 <li class="nav-item">
                     <router-link :to="{ name: 'resume'}" class="nav-link" @click.native="didClickNavItem">简历</router-link>
