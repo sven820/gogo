@@ -7,7 +7,7 @@ import {OrbitControls} from "three/examples/jsm/controls/OrbitControls"
 import gsap from "gsap"
 
 // ----------------------------------------------------------------
-// 标准材质 环境光
+// 几何体
 
 //场景，放东西[]
 const scene = new THREE.Scene();
@@ -21,24 +21,25 @@ const camera = new THREE.PerspectiveCamera(
 camera.position.set(10, 10, 10);
 scene.add(camera);
 
-//导入纹理
-const textureLoader = new THREE.TextureLoader();
-const texture = textureLoader.load("./texture/minecraft.webp");
+//物体
+const geometry = new THREE.BufferGeometry();
+const vertices = new Float32Array([
+    -1,-1,1,
+    1,-1,1,
+    1,1,1,
+    1,1,1,
+    -1,1,1,
+    -1,-1,1,
+])
+geometry.setAttribute("position", new THREE.BufferAttribute(vertices, 3));
 
-// 添加物体1
-const cubeGeometry = new THREE.BoxBufferGeometry(1,1,1);
-const standardMaterial = new THREE.MeshStandardMaterial(
-    {
-        color: "#ffffff", 
-        map: texture,
-    },
+const material = new THREE.MeshBasicMaterial(
+    {color: 0xffff00,}
 );
-const cube = new THREE.Mesh(cubeGeometry, standardMaterial);
-scene.add(cube);
+const mesh = new THREE.Mesh(geometry, material);
+scene.add(mesh);
 
-// 灯光 
-
-//render
+//小素
 const render = new THREE.WebGLRenderer();
 render.setSize(window.innerWidth, window.innerHeight);
 

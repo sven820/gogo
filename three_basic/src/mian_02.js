@@ -16,7 +16,7 @@ const camera = new THREE.PerspectiveCamera(
     0.1,
     1000
 );
-camera.position.set(0, 0, 10);
+camera.position.set(10, 10, 10);
 scene.add(camera);
 
 //物体
